@@ -49,15 +49,7 @@ def getData():
   result = tecnicas_schema.dump(all_data)
   return jsonify(result)
 
-@app.route('/tecnica/get/<id>', methods=['GET'])
-def get_task(id):
-  tecnica = Tecnica.query.get(id)
-  return tecnica_schema.jsonify(tecnica)
 
-
-@app.route('/', methods=['GET'])
-def index():
-    return jsonify({'message': 'Welcome to my API'})
 
 
 
